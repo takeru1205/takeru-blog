@@ -1,5 +1,6 @@
 import { getList } from '@/libs/microcms';
 import { LIMIT } from '@/constants';
+import Link from 'next/link';
 import Pagination from '@/components/Pagination';
 import ArticleList from '@/components/ArticleList';
 
@@ -11,6 +12,7 @@ export default async function Page() {
   });
   return (
     <>
+      <Link href="/about">About Me</Link>
       <ArticleList articles={data.contents} />
       <Pagination totalCount={data.totalCount} />
     </>
